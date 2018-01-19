@@ -13,13 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        //let titles = ["推荐", "手游玩法大全", "娱乐手", "游戏游戏", "趣玩", "游戏游戏", "趣玩"]
-        let titles = ["推荐", "手游", "娱乐", "游戏", "趣玩"]
+        let titles = ["推荐", "手游玩法大全", "娱乐手", "游戏游戏", "趣玩", "游戏游戏", "趣玩"]
+        //let titles = ["推荐", "手游", "娱乐", "游戏", "趣玩"]
         let style = SCOptionPageStyle()
         style.titleViewHeight = 44
-        style.isScrollEnable = false
-        style.isTitleScale = false
-        style.isShowCoverView = false
+        style.isScrollEnable = true
+        style.isTitleScale = true
+        style.isShowCoverView = true
         
         var childVcs = [UIViewController]()
         for _ in 0..<titles.count {
