@@ -1,8 +1,9 @@
 # SCOptionPage
-类似于今日头条,斗鱼TV 选项卡界面(界面可以根据需求自行定制, 是否放大)
-![UI样式1](https://github.com/SCKaito/SCOptionPage/blob/master/image/option1.gif)![UI样式2](https://github.com/SCKaito/SCOptionPage/blob/master/image/option2.gif)
+类似于今日头条,斗鱼TV 选项卡界面(界面可以根据需求自行定制, 是否文字放大,是否滚动,是否有背景,颜色,大小都可根据需求自定制)
+### 样式
+![UI样式1](https://github.com/SCKaito/SCOptionPage/blob/master/image/1.gif)![UI样式2](https://github.com/SCKaito/SCOptionPage/blob/master/image/2.gif)![样式3](https://github.com/SCKaito/SCOptionPage/blob/master/image/3.gif)
 
-### 设置
+### 代码
 ```
 //let titles = ["推荐", "手游玩法大全", "娱乐手", "游戏游戏", "趣玩", "游戏游戏", "趣玩"]
 let titles = ["推荐", "手游", "娱乐", "游戏", "趣玩"]
