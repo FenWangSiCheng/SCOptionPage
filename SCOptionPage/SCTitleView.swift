@@ -18,6 +18,7 @@ class SCTitleView: UIView {
     
     fileprivate var titles : [String]
     fileprivate var style : SCOptionPageStyle
+    fileprivate  var superView: SCOpitonPageView
     fileprivate lazy var currentIndex : Int = 0
     fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
     fileprivate lazy var scrollView : UIScrollView = {
@@ -41,9 +42,10 @@ class SCTitleView: UIView {
         return coverView
     }()
     
-    init(frame: CGRect, titles:[String], style:SCOptionPageStyle) {
+    init(frame: CGRect, titles:[String], style:SCOptionPageStyle, superView:SCOpitonPageView) {
         self.titles = titles
         self.style = style
+        self.superView = superView
         super.init(frame: frame)
         
         setupUI()
@@ -168,6 +170,8 @@ extension SCTitleView {
 extension SCTitleView {
     @objc fileprivate func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
         guard let newLabel = tapGes.view as? UILabel else { return }
+        
+        superView.delegate?.optionPageClick(optionPage: superView, index: newLabel.tag)
         
         guard currentIndex != newLabel.tag else {
             return

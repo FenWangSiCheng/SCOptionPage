@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,25 @@ class ViewController: UIViewController {
         
         let pageViewFrame = CGRect(x: 0, y: 64, width: view.bounds.width, height: view.bounds.height - 64 - 49)
         let pageView = SCOpitonPageView(frame: pageViewFrame, titles: titles, titleStyle: style, childVcs: childVcs, parentVc: self)
+        pageView.delegate = self
         view.addSubview(pageView)
     }
+    
+    
 
+}
+
+extension ViewController: SCOptionPageDelegate {
+    
+    func optionPageClick(optionPage : SCOpitonPageView, index : Int){
+        
+        print(optionPage)
+        print(index)
+    }
+    
+    func optionPageScroll(optionPage : SCOpitonPageView, index : Int){
+        print(optionPage)
+        print(index)
+    }
 }
 
