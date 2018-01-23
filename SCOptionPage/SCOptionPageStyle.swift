@@ -34,5 +34,11 @@ class SCOptionPageStyle: NSObject {
     var coverMargin : CGFloat = 8//覆盖间距
     var coverHeight : CGFloat = 25//覆盖高度
     
+    var pageControlColor: UIColor = UIColor(r: 30, g: 30, b: 30, alpha: 0.3)//pageControl背景色
+    var pageControlTintColor : UIColor = .lightGray//pageControl没选中颜色
+    var pageControlCurrenColor : UIColor = .white//pageControl选中颜色
+    var pageControlHeight: CGFloat = 20 //pageControl高度
+    var pageControlNumber: Int = 2//pageControl数量
+    
     
 }

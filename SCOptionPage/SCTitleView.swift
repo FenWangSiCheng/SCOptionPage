@@ -18,7 +18,7 @@ class SCTitleView: UIView {
     
     fileprivate var titles : [String]
     fileprivate var style : SCOptionPageStyle
-    fileprivate  var superView: SCOpitonPageView
+    fileprivate  var superView: SCOpitonPageView?
     fileprivate lazy var currentIndex : Int = 0
     fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
     fileprivate lazy var scrollView : UIScrollView = {
@@ -42,7 +42,7 @@ class SCTitleView: UIView {
         return coverView
     }()
     
-    init(frame: CGRect, titles:[String], style:SCOptionPageStyle, superView:SCOpitonPageView) {
+    init(frame: CGRect, titles:[String], style:SCOptionPageStyle, superView: SCOpitonPageView? = nil) {
         self.titles = titles
         self.style = style
         self.superView = superView
@@ -171,7 +171,7 @@ extension SCTitleView {
     @objc fileprivate func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
         guard let newLabel = tapGes.view as? UILabel else { return }
         
-        superView.delegate?.optionPageClick(optionPage: superView, index: newLabel.tag)
+        superView?.delegate?.optionPageClick(optionPage: superView!, index: newLabel.tag)
         
         guard currentIndex != newLabel.tag else {
             return
@@ -224,7 +224,7 @@ extension SCTitleView {
         }
     }
     
-    fileprivate func adjustPosition(_ newLabel : UILabel) {
+    func adjustPosition(_ newLabel : UILabel) {
         guard style.isScrollEnable else { return }
         var offsetX = newLabel.center.x - scrollView.bounds.width * 0.5
         if offsetX < 0 {
@@ -242,6 +242,11 @@ extension SCTitleView {
 extension SCTitleView : SCContentViewDelegate {
     func contentView(contentView: SCContentView, inIndex: Int) {
   
+        titleViewChange(inIndex: inIndex)
+    }
+    
+    func titleViewChange(inIndex: Int) {
+        
         guard inIndex != currentIndex else {
             return
         }
