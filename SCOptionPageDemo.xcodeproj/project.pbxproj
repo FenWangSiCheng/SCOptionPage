@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E6915A120173C4600095637 /* SCOptionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6915A020173C4600095637 /* SCOptionPageViewController.swift */; };
+		9E6915A320173CC100095637 /* SCMenuPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6915A220173CC100095637 /* SCMenuPageViewController.swift */; };
+		9E6915A720173F1000095637 /* SCMenuPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6915A620173F1000095637 /* SCMenuPageView.swift */; };
+		9E6915A92017406500095637 /* SCMenuPageCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6915A82017406500095637 /* SCMenuPageCollectionViewFlowLayout.swift */; };
 		9E6E6AEA2011EE58008B7A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E6AE92011EE58008B7A0B /* AppDelegate.swift */; };
 		9E6E6AEC2011EE58008B7A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E6AEB2011EE58008B7A0B /* ViewController.swift */; };
 		9E6E6AEF2011EE58008B7A0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6E6AED2011EE58008B7A0B /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E6915A020173C4600095637 /* SCOptionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOptionPageViewController.swift; sourceTree = "<group>"; };
+		9E6915A220173CC100095637 /* SCMenuPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMenuPageViewController.swift; sourceTree = "<group>"; };
+		9E6915A620173F1000095637 /* SCMenuPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMenuPageView.swift; sourceTree = "<group>"; };
+		9E6915A82017406500095637 /* SCMenuPageCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMenuPageCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		9E6E6AE62011EE58008B7A0B /* SCOptionPageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCOptionPageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6E6AE92011EE58008B7A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E6E6AEB2011EE58008B7A0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +75,8 @@
 				9E6E6AFB2011EEBB008B7A0B /* SCOptionPage */,
 				9E6E6AE92011EE58008B7A0B /* AppDelegate.swift */,
 				9E6E6AEB2011EE58008B7A0B /* ViewController.swift */,
+				9E6915A220173CC100095637 /* SCMenuPageViewController.swift */,
+				9E6915A020173C4600095637 /* SCOptionPageViewController.swift */,
 				9E6E6AED2011EE58008B7A0B /* Main.storyboard */,
 				9E6E6AF02011EE58008B7A0B /* Assets.xcassets */,
 				9E6E6AF22011EE58008B7A0B /* LaunchScreen.storyboard */,
@@ -83,6 +93,8 @@
 				9E6E6AFD2011EEBB008B7A0B /* SCOpitonPageView.swift */,
 				9E6E6AFE2011EEBB008B7A0B /* SCOptionPageStyle.swift */,
 				9E6E6AFF2011EEBB008B7A0B /* SCTitleView.swift */,
+				9E6915A620173F1000095637 /* SCMenuPageView.swift */,
+				9E6915A82017406500095637 /* SCMenuPageCollectionViewFlowLayout.swift */,
 			);
 			path = SCOptionPage;
 			sourceTree = SOURCE_ROOT;
@@ -159,10 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6915A320173CC100095637 /* SCMenuPageViewController.swift in Sources */,
 				9E6E6B012011EEBB008B7A0B /* SCOpitonPageView.swift in Sources */,
+				9E6915A720173F1000095637 /* SCMenuPageView.swift in Sources */,
 				9E6E6AEC2011EE58008B7A0B /* ViewController.swift in Sources */,
+				9E6915A92017406500095637 /* SCMenuPageCollectionViewFlowLayout.swift in Sources */,
 				9E6E6B002011EEBB008B7A0B /* SCContentView.swift in Sources */,
 				9E6E6B032011EEBB008B7A0B /* SCTitleView.swift in Sources */,
+				9E6915A120173C4600095637 /* SCOptionPageViewController.swift in Sources */,
 				9E6E6AEA2011EE58008B7A0B /* AppDelegate.swift in Sources */,
 				9E6E6B052011EEEA008B7A0B /* UIColor-Extension.swift in Sources */,
 				9E6E6B022011EEBB008B7A0B /* SCOptionPageStyle.swift in Sources */,
