@@ -21,6 +21,7 @@ class SCContentView: UIView {
     
     fileprivate var childVcs : [UIViewController]
     fileprivate var parentVc : UIViewController
+    fileprivate var superView : SCOpitonPageView
     
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -41,11 +42,11 @@ class SCContentView: UIView {
         return collectionView
     }()
     
-    init(frame : CGRect, childVcs : [UIViewController], parentVc : UIViewController) {
+    init(frame : CGRect, childVcs : [UIViewController], parentVc : UIViewController, superView: SCOpitonPageView) {
         
         self.childVcs = childVcs
         self.parentVc = parentVc
-        
+        self.superView = superView
         super.init(frame: frame)
         
         setupUI()
@@ -109,6 +110,8 @@ extension SCContentView : UICollectionViewDelegate {
     private func collectionViewEndScroll() {
         
         let endIndex = Int(collectionView.contentOffset.x / collectionView.bounds.width)
+        
+        superView.delegate?.optionPageScroll(optionPage: superView, index: endIndex)
         delegate?.contentView(contentView: self, inIndex: endIndex)
     }
 }

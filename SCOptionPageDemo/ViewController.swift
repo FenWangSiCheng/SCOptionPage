@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +33,19 @@ class ViewController: UIViewController {
     
     
 
+}
+
+extension ViewController: SCOptionPageDelegate {
+    
+    func optionPageClick(optionPage : SCOpitonPageView, index : Int){
+        
+        print(optionPage)
+        print(index)
+    }
+    
+    func optionPageScroll(optionPage : SCOpitonPageView, index : Int){
+        print(optionPage)
+        print(index)
+    }
 }
 
