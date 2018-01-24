@@ -54,7 +54,6 @@ extension SCMenuPageView {
         titleView.delegate = self
         addSubview(titleView)
        
-        
         // 2.创建UIPageControl
         let pageControlY = isTitleInTop ? (bounds.height - style.pageControlHeight) : (bounds.height - style.pageControlHeight - style.titleViewHeight)
         let pageControlFrame = CGRect(x: 0, y: pageControlY, width: bounds.width, height: style.pageControlHeight)

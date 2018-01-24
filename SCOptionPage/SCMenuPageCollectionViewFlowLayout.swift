@@ -2,7 +2,7 @@
 //  SCMenuPageCollectionViewFlowLayout.swift
 //  SCOptionPageDemo
 //
-//  Created by abon on 2018/1/23.
+//  Created by kaito on 2018/1/23.
 //  Copyright © 2018年 kaito. All rights reserved.
 //
 
@@ -48,15 +48,14 @@ extension SCMenuPageCollectionViewFlowLayout {
                 let itemX = CGFloat(prePageCount + page) * collectionView!.bounds.width + sectionInset.left + (itemW + minimumInteritemSpacing) * CGFloat(index % cols)
                 attr.frame = CGRect(x: itemX, y: itemY, width: itemW, height: itemH)
                 
-                // 2.4.保存attr到数组中
+                // 保存attr到数组中
                 cellAttrs.append(attr)
             }
             
             prePageCount += (itemCount - 1) / (cols * rows) + 1
         }
         
-        
-        // 3.计算最大Y值
+        // 计算最大Y值
         maxWidth = CGFloat(prePageCount) * collectionView!.bounds.width
     }
 }
